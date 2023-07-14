@@ -5,55 +5,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
-    <div class="container">
-      <h1>Inputs</h1>
+    <h1><a href="#container">Inputs</a></h1>
+    <div class="container" id="container">
 
       <div class="rows">
-        <label for="default">Label</label><br>
+        <label for="default">Default Input field</label><br>
         <input type="text" placeholder="Placeholder" class="default">
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
+        <label for="error" style="color:  #D32F2F;">Input field with required condition</label><br>
         <input type="text" placeholder="Placeholder" class="error" required>
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="dissabled" disabled>
+        <label for="disabled">Input field can be disabled</label><br>
+        <input type="text" placeholder="Placeholder" class="disabled" id="disabled">
+        <input type="checkbox" id="disableCheck" onchange="disable()">Disable input field
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
+        <label for="helper">Input Field with Helper Text<br>
+          <input type="text" placeholder="Placeholder" class="helper">
+          <span class="helperText">Some interesting text</span>
+        </label>
+      </div>
+
+      <div class="rows">
+        <label for="helperReq" style="color:  #D32F2F;">Required Input field with Helper Text<br>
+          <input type="text" placeholder="Placeholder" class="helperReq" required>
+          <span class="helperText" style="color:  #D32F2F;">Some interesting text</span>
+        </label>
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
+        <label for="icon">Input field with Icon</label><br>
+        <div class="iconInputBox">  
+          <input type="text" placeholder="Placeholder" class="icon" id="box">
+          <i class="material-symbols-outlined" id="icon">call</i>
+        </div>
+        <label for="icons">Icon</label>
+        <select id="icons" onchange="iconSelect()">
+            <option value="mail">Mail</option>
+            <option value="call" selected>Call</option>
+            <option value="comment">Comment</option>
+            <option value="password">Password</option>
+            <option value="contact_mail">Contact</option>
+        </select>
+        <label for="position">Position</label>
+        <select id="position" onchange="position()">
+            <option value="none" selected>none</option>
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+        </select>
+      </div>
+
+      <div class="rows">
+        <label for="text">Input field with Text</label><br>
+        <input type="text" value="Text" class="text">
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
+        <label for="varSize">Variable size Input Field</label><br>
+        <input type="text" placeholder="Placeholder" class="varSize" id="varSize">
+        <label for="sizes">Select Size</label>
+        <select id="sizes" onchange="changeSize()">
+            <option value="small">Sm</option>
+            <option value="medium">Md</option>
+        </select>
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
+        <label for="fullWidth">Input field with full width of parent</label><br>
+        <input type="text" placeholder="Placeholder" class="fullWidth">
       </div>
       
       <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
-      </div>
-      
-      <div class="rows">
-        <label for="default">Label</label><br>
-        <input type="text" placeholder="Placeholder" class="default">
+        <label for="textArea">Input/Textarea field</label><br>
+        <input type="textarea" placeholder="Placeholder" class="textArea">
+        <textarea placeholder="Placeholder" class="textArea"></textarea>
       </div>
     </div>
+    <footer>
+      <img src="devChallenges.png" alt="devChallenges.io">
+      <h2 class="createdBy">created by <a href="https://devchallenges.io/portfolio/PrathamS1" target="_blank">PrathamS1</a> - <a href="https://devchallenges.io/" target="_blank">devChallenges.io</a></h2>
+      <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#444444"></stop><stop offset="95%" stop-color="#e5e5f7"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,200 0,200 C 106.5263157894737,235.25358851674642 213.0526315789474,270.50717703349284 318,270 C 422.9473684210526,269.49282296650716 526.3157894736843,233.22488038277515 601,229 C 675.6842105263157,224.77511961722485 721.6842105263158,252.5933014354067 812,243 C 902.3157894736842,233.4066985645933 1036.9473684210527,186.4019138755981 1149,173 C 1261.0526315789473,159.5980861244019 1350.5263157894738,179.79904306220095 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#444444"></stop><stop offset="95%" stop-color="#e5e5f7"></stop></linearGradient></defs><path d="M 0,600 C 0,600 0,400 0,400 C 116.35406698564591,430.32535885167465 232.70813397129183,460.65071770334936 335,455 C 437.29186602870817,449.34928229665064 525.5215311004786,407.72248803827745 625,371 C 724.4784688995214,334.27751196172255 835.2057416267941,302.4593301435406 911,327 C 986.7942583732059,351.5406698564594 1027.6555023923445,432.4401913875599 1110,454 C 1192.3444976076555,475.5598086124401 1316.1722488038276,437.77990430622003 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+    </footer>
+    
+    <script src="script.js"></script>
   </body>
 </html>

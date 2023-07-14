@@ -1,5 +1,72 @@
+body{
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#67b8ea 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    padding: 10px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+h1 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 1px;
+  font-family: "Raleway", cursive;
+  font-weight: 100;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to right, black, #eee, black);
+  white-space: nowrap;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  width: 600px;
+  margin-left: -300px;
+  margin-top: -220px;
+  background: radial-gradient(ellipse closest-side, #444, black);
+  z-index: -1;
+}
+h1 a {
+  background: black;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  letter-spacing: 30px;
+  color: white;
+  animation: comein 1.5s 1 ease-in-out forwards;
+}
+
+@keyframes comein {
+  0% {
+    letter-spacing: 80px;
+    color: rgba(255, 255, 255, 0);
+  }
+  70% {
+    letter-spacing: 20px;
+  }
+  100% {
+    letter-spacing: 25px;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
 .rows{
     border: 2px solid;
+    padding: 20px;
+}
+.rows label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
 }
 .default{
     width: 12.5rem;
@@ -38,7 +105,7 @@
 .error:focus{
     border: 1px solid #D32F2F;
 }
-.dissabled{
+.disabled{
     width: 12.5rem;
     height: 3.5rem;
     flex-shrink: 0;
@@ -46,4 +113,119 @@
     padding-left: 0.75rem;
     border: 1px solid var(--gray-5, #E0E0E0);
     background: var(--gray-6, #F2F2F2);
+}
+.helper{
+    width: 12.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+    border: 1px solid var(--gray-3, #828282);
+}
+.helperText{
+    color: var(--gray-3, #828282);
+    font-family: Noto Sans JP;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+}
+.helperReq{
+    width: 12.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+}
+.helperReq:required{
+    border: 1px solid #D32F2F;
+}
+.helperReq:valid{
+    border: 1px solid #333;
+}
+.iconInputBox{
+    position: relative;
+    display: inline-block;
+}
+.iconInputBox input{
+    padding-left: 40px;
+    width: 10.75rem;
+    height: 3.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-3, #828282);
+}
+.iconInputBox i{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iconInputBox input:hover,.iconInputBox input:focus{
+    cursor: pointer;
+    border:1px solid #333;
+}
+.text{
+    width: 12.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+    border: 1px solid var(--gray-3, #828282);
+    color: var(--gray-1, #333);
+    font-family: Noto Sans JP;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.text:hover,.text:focus{
+    cursor: pointer;
+    border: 1px solid #333;
+    outline: none;
+}
+.varSize{
+    width: 12.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-3, #828282);
+    padding-left: 0.75rem;
+}
+.varSize:hover,.varSize:focus{
+    cursor: pointer;
+    border: 1px solid #333;
+    outline: none;
+}
+.fullWidth{
+    width: 100%;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    padding-left: 0.75rem;
+    border: 1px solid var(--gray-3, #828282);
+}
+.fullWidth:hover,.fullWidth:focus{
+    cursor: pointer;
+    border: 1px solid #333;
+    outline: none;
+}
+.textArea{
+    width: 12.5rem;
+    height: 9.375rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-3, #828282);
+    display: block;
+    margin: 2px 0 20px 2px;
+}
+.textArea:hover,.textArea:focus{
+    cursor: pointer;
+    border: 1px solid #333;
+}
+body>footer{
+    position: sticky;
+    margin-top: 5rem;
+    text-align: center;
 }
