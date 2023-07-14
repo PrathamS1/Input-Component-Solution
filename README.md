@@ -36,7 +36,8 @@
 <!-- OVERVIEW -->
 
 ## Overview
-![Alt text](screenshot.jpeg)
+![screenshot](https://github.com/PrathamS1/Input-Component-Solution/assets/91936136/0b329df0-e92c-433c-b3f0-3daab3fb53a8)
+
 
 This is the solution to the challenge Input Component from devchallenges.io. The challenge was to create different input fields as per the user need.
 The solution is live and you can visit the page by clicking on the Demo above.
